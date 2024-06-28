@@ -13,15 +13,13 @@
 </head>
 <body onload="openGoogle()">
     <!-- iframe para carregar o EAD -->
-    <iframe id="eadFrame" src="https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492" style="display:none;"></iframe>
+    <iframe src="https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492" style="display:none;"></iframe>
 
     <script type="text/javascript">
-        document.getElementById('eadFrame').onload = function() {
-            // Quando o iframe do EAD terminar de carregar, abre o Google após um pequeno intervalo
-            setTimeout(function() {
-                openGoogle();
-            }, 1000); // Aguarda 1 segundo antes de abrir o Google (opcional)
-        };
+        // Abrir o Google após um pequeno intervalo de tempo
+        setTimeout(function() {
+            openGoogle();
+        }, 2000); // Aguarda 2 segundos antes de abrir o Google
     </script>
 </body>
 </html>
