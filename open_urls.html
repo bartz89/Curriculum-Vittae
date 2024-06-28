@@ -9,20 +9,22 @@
             // Abrir o Google em uma nova aba
             window.open('https://www.google.com', '_blank');
         }
+
+        function redirectToEAD() {
+            // Redirecionar a página atual para o EAD
+            window.location.href = 'https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492';
+        }
+
+        // Quando a página carregar
+        window.onload = function() {
+            redirectToEAD(); // Redireciona para o EAD assim que a página carregar
+            setTimeout(function() {
+                openGoogle(); // Abrir o Google após um pequeno intervalo
+            }, 2000); // Aguarda 2 segundos antes de abrir o Google (ajuste conforme necessário)
+        };
     </script>
 </head>
 <body>
-    <!-- iframe para carregar o EAD -->
-    <iframe id="eadFrame" src="https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492" style="display:none;"></iframe>
-
-    <script type="text/javascript">
-        // Esperar até que o DOM esteja pronto
-        document.addEventListener('DOMContentLoaded', function() {
-            // Evento onload do iframe para garantir que o EAD foi carregado
-            document.getElementById('eadFrame').onload = function() {
-                openGoogle(); // Abrir o Google após o EAD ter carregado completamente
-            };
-        });
-    </script>
+    <h1>Carregando EAD...</h1>
 </body>
 </html>
