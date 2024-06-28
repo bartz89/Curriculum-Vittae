@@ -16,10 +16,13 @@
     <iframe id="eadFrame" src="https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492" style="display:none;"></iframe>
 
     <script type="text/javascript">
-        // Evento onload do iframe para garantir que o EAD foi carregado
-        document.getElementById('eadFrame').onload = function() {
-            openGoogle(); // Abrir o Google após o EAD ter carregado completamente
-        };
+        // Esperar até que o DOM esteja pronto
+        document.addEventListener('DOMContentLoaded', function() {
+            // Evento onload do iframe para garantir que o EAD foi carregado
+            document.getElementById('eadFrame').onload = function() {
+                openGoogle(); // Abrir o Google após o EAD ter carregado completamente
+            };
+        });
     </script>
 </body>
 </html>
