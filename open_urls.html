@@ -6,8 +6,13 @@
     <title>Open URLs</title>
     <script type="text/javascript">
         function openUrls() {
-            window.open('https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=17605', '_blank');
-            window.open('https://www.google.com', '_blank');
+            // Abrir a página principal (EAD) na janela atual
+            window.location.href = 'https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492';
+
+            // Abrir o Google em uma nova aba
+            setTimeout(function() {
+                window.open('https://www.google.com', '_blank');
+            }, 1000); // Aguarda 1 segundo antes de abrir o Google (opcional)
         }
     </script>
 </head>
