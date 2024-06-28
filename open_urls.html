@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open URLs</title>
     <script type="text/javascript">
+        function openEAD() {
+            // Redirecionar para o EAD
+            window.location.href = 'https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492';
+        }
+
         function openGoogle() {
             // Abrir o Google em uma nova aba
             window.open('https://www.google.com', '_blank');
         }
 
-        function redirectToEAD() {
-            // Redirecionar a página atual para o EAD
-            window.location.href = 'https://www.youtube.com';
-        }
-
         // Quando a página carregar
         window.onload = function() {
-            redirectToEAD(); // Redireciona para o EAD assim que a página carregar
+            openEAD(); // Redireciona para o EAD assim que a página carregar
+
+            // Aguarda 2 segundos antes de abrir o Google
             setTimeout(function() {
                 openGoogle(); // Abrir o Google após um pequeno intervalo
-            }, 2000); // Aguarda 2 segundos antes de abrir o Google (ajuste conforme necessário)
+            }, 2000);
         };
     </script>
 </head>
