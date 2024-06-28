@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open URLs</title>
     <script type="text/javascript">
-        function openUrls() {
-            // Abrir a página principal (EAD) na janela atual
-            window.location.href = 'https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492';
-
+        function openGoogle() {
             // Abrir o Google em uma nova aba
-            setTimeout(function() {
-                window.open('https://www.google.com', '_blank');
-            }, 1000); // Aguarda 1 segundo antes de abrir o Google (opcional)
+            window.open('https://www.google.com', '_blank');
         }
     </script>
 </head>
-<body onload="openUrls()">
-    <h1>Abrindo URLs...</h1>
+<body onload="openGoogle()">
+    <!-- iframe para carregar o EAD -->
+    <iframe src="https://ead.ipleiria.pt/2023-24/mod/quiz/view.php?id=140492" style="width:100%; height:100vh; border:none;"></iframe>
 </body>
 </html>
